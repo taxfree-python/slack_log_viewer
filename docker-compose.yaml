@@ -1,0 +1,12 @@
+# https://qiita.com/jhorikawa_err/items/fb9c03c0982c29c5b6d5
+version: '3.9'
+services:
+  python3:
+    restart: always
+    build: .
+    container_name: 'slack_log_viewer'
+    working_dir: '/root/'
+    tty: true
+    volumes:
+      - ./src:/root/src
+      - ./data:/root/data
